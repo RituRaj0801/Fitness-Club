@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KCC Fitness Club</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+						/*navbar*/
+		#menubar
+		{
+			position: absolute;
+			width: 100%;
+			float: right;
+			font-weight: bold;
+		}
+		#menubar li a
+		{
+			color: #00cc99;
+		}
+		#menubar li a:hover
+		{
+			color: white;
+		}
+		.jumbotron
+		{
+			background-image: url(girl.jpg);
+			background-size: cover;
+		}
+		@media screen and (min-width: 480px)
+		{
+			.jumbotron
+			{
+				height: 50vh;
+			}
+			.jumbotron .front
+			{
+				display: none;
+				position: absolute;
+				background-color: transparent;
+				margin-top: 25%;
+				color: white;
+				border-radius: 0px 50px 50px 0px;
+				box-shadow: 7px 5px 12px 7px rgba(255,255,255,0.9);
+			}	
+		}
+		@media screen and (min-width: 900px)
+		{
+			.jumbotron
+			{
+				height: 100vh;
+			}
+			.jumbotron .front
+			{
+				position: absolute;
+				display: inline-flex;
+				background-color: transparent;
+				margin-top: 15%;
+				color: white;
+				border-radius: 0px 50px 50px 0px;
+				box-shadow: 7px 5px 12px 7px rgba(255,255,255,0.9);
+			}
+			.front h3
+			{
+				writing-mode: vertical-lr;
+				transform: rotate(180deg);
+				color: #00cc99;
+				float: left;
+			}
+			.front h1 span
+			{
+				color: #00cc99;
+			}	
+		}
+						/*About*/
+		
+		@media screen and (min-width: 480px)
+		{
+			.About
+			{
+				background-image: url(3.jpg);
+				background-size: cover;
+				padding-bottom: 1%;
+				padding-top: 1%;
+				margin-top: -5.5%;
+			}
+			.About h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 25%;
+				padding: 0 1%;
+				transform: translateX(160%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		@media screen and (min-width: 900px)
+		{
+			.About
+			{
+				background-image: url(3.jpg);
+				background-size: cover;
+				padding-bottom: 2%;
+				padding-top: 1%;
+				margin-top: -2%;
+			}
+			.About h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 20%;
+				transform: translateX(200%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		.About h2
+		{ 
+			width: 35%;
+			margin-top: 1%;
+			margin-left: 3%;
+			padding-left: 1.5%;
+		}
+		.About h2 span
+		{
+			color: #00cc99;
+			text-decoration: overline;
+			text-decoration-color: white;
+		}
+		.About .row
+		{
+			margin: 3% 5%;
+			text-align: center;
+		}
+		.About .right img
+		{
+			max-width: 100%;
+			border-radius: 12px;
+			height: 70vh;
+			box-shadow: 0px 0px 12px 7px rgba(169,169,169,0.9);
+		}
+		.left p
+		{
+			color: white;
+			margin-top: 15%;
+			font-weight: bold;
+			padding: 5%;
+			border-radius: 8px;
+			box-shadow: 0px 0px 12px 7px rgba(169,169,169,0.9);
+		}
+							/*Services*/
+		.Service
+		{
+			background-image: url(10.jpg);
+			background-size: cover;
+			margin-top: -2%;
+			padding-top: 1%;
+			padding-bottom: 2%;
+			border-top: 5px solid white;
+		}
+		@media screen and (min-width: 480px)
+		{
+			.Service h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 30%;
+				padding: 0 1%;
+				transform: translateX(130%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		@media screen and (min-width: 900px)
+		{
+			.Service h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 20%;
+				transform: translateX(200%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		.Service .row
+		{
+			padding: 0 2%;
+			padding-bottom: 2%;
+		}
+		.Service .col-md-4 img
+		{
+			max-width: 100%;
+			border-radius: 8px;
+		}
+		.Service .col-md-4 h4
+		{
+			position: absolute;
+			z-index: 1;
+			margin-top: 25%;
+			margin-left: 25%;
+			color: white;
+			font-size: 2rem;
+		}
+		.Service h2
+		{
+			margin: 3% 0;
+			width: 65%;
+			padding-left: 1.5%;
+		}
+		.Service h2 span
+		{
+			color: #00cc99;
+			text-decoration: overline;
+			text-decoration-color: white; 
+		}
+							/*Team*/
+		.team
+		{
+			background-image: url(14.jpg);
+			background-size: cover;
+			margin-top: -2%;
+			padding-top: 2%;
+			border-top: 5px solid white;
+		}
+		@media screen and (min-width: 480px)
+		{
+			.team h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 45%;
+				padding: 0 1%;
+				transform: translateX(70%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		@media screen and (min-width: 900px)
+		{
+			.team h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 20%;
+				transform: translateX(200%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		.team .row
+		{
+			padding: 2% 2%;
+		}
+		.team .col-md-4 img
+		{
+			max-width: 100%;
+			border-radius: 8px;
+			height: 80vh;
+			justify-content: center;
+			width: 100%;	
+			transition: 1s;
+		}
+		.team .col-md-4 img:hover
+		{
+			transform: scale(1.05);
+		}
+		.team .col-md-4 p
+		{
+			display: inline-flex;
+			margin-left: 10%;
+			padding-left: 12%;
+		}
+		.team .col-md-4 a
+		{
+			position: absolute;
+			z-index: 10;
+			margin-top: 5%;
+			color: white;
+		}
+		.team h2
+		{
+			margin: 3% 0;
+			width: 65%;
+			padding-left: 1.5%;
+		}
+		.team h2 span
+		{
+			color: #00cc99;
+			text-decoration: overline;
+			text-decoration-color: white; 
+		}
+		.team .col-md-4 h3
+		{
+			position: absolute;
+			z-index: 1;
+			margin-top: 65%;
+			margin-left: 35%;
+			color: white;
+			font-size: 2.5rem;
+		}
+		.team .col-md-4 h4
+		{
+			text-align: center;
+			color: #00cc99;
+		}
+							/*Contact*/
+		
+		@media screen and (min-width: 480px)
+		{
+			.cont
+			{
+				margin: 4% 5%;
+				max-width: 90%;
+				background: linear-gradient(orange,red);
+				padding: 5% 6%;
+				border-radius: 8px;
+			}
+			#contact h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 45%;
+				padding: 0 1%;
+				transform: translateX(70%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		@media screen and (min-width: 900px)
+		{
+			.cont
+			{
+				margin: 4% 5%;
+				max-width: 40%;
+				background: linear-gradient(orange,red);
+				padding: 5% 6%;
+				border-radius: 8px;
+			}
+			#contact h1
+			{
+				color: white;
+				background: linear-gradient(250deg,#00cc99,black);
+				width: 20%;
+				transform: translateX(200%);
+				text-align: center;
+				margin-top: 1%;
+				border-radius: 12px;
+			}
+		}
+		input[type="text"], input[type="email"], input[type="number"]
+		{
+			color: black;
+			width: 80%;
+			outline: none;
+			border-radius: 8px;
+			text-align: center;
+			font-weight: bold;
+			font-style: italic;
+			border: 2px solid #00cc99;
+			transition: 1s;
+		}
+		input[type="text"]:hover, input[type="email"]:hover, input[type="number"]:hover
+		{
+			transform: scale(1.05);
+			background-color: grey;
+		}
+		textarea
+		{
+			border-radius: 8px;
+			outline: none;
+			border: 2px solid #00cc99;
+		}
+		button
+		{
+			border-radius: 8px;
+			text-align: center;
+			margin-left: 20%;
+			padding: 1% 2%;
+			font-weight: bold;
+			color: white;
+			background: linear-gradient(#00cc99,#00cc99);
+			transition: 1s;
+		}
+		button:hover
+		{
+			transform: scale(1.1);
+			color: #00cc99;
+			background: white;
+			border: 2px solid #00cc99;
+		}
+		/*---------------Social Media-------------*/
+		#Social
+		{
+			background-size: cover;
+		}
+		#Social .col-md-4
+		{
+			margin: 5% 0;
+		}
+		#Social h3
+		{
+			text-align: center;
+			color: #00cc99;
+		}
+		#Social p
+		{
+			text-align: center;
+			color: white;
+		}
+		.Sociall .col-md-2 a
+		{
+			color: white;
+			text-decoration: none;
+			margin-left: 1%;
+		}
+		.Sociall .col-md-2 i
+		{
+			font-size: 2rem;
+		}
+		@media screen and (min-width: 480px)
+		{
+			.Sociall p 
+			{
+				float: left;
+				text-align: center;
+				background-color: transparent;
+			}
+		}
+		@media screen and (min-width: 900px)
+		{
+			.Sociall p
+			{
+				float: left;
+				background-color: transparent;
+			}	
+		}
+		.Sociall .box
+		{
+			background-color: gold;
+			height: 20vh;
+			max-width: 70%;
+			border-radius: 25px;
+			box-shadow: 7px 12px 3px 3px rgba(0,0,0,0.9);
+			margin-bottom: 3%; 
+		}
+		.Sociall .box h1
+		{
+			color: #00cc99;
+			float: ;
+			text-decoration-line: ;
+			border-radius: 25px;
+			font-size: 30px;
+			padding-top: 45px;
+			font-weight: bold;
+			padding-top: ;
+			text-align: center;
+			text-shadow: 1px 1px 1px black,
+					1px 2px 1px black,
+					1px 3px 1px black,
+					1px 4px 1px black,
+					1px 5px 1px black,
+					1px 6px 1px black,
+					1px 7px 1px black,
+					1px 8px 1px black,
+					1px 9px 1px black;
+			animation: anim 2s linear infinite;		
+		}
+		@keyframes anim
+		{
+			0%
+			{
+				transform: scale(1.1);
+			}
+			50%
+			{
+				transform: scale(1.3);
+			}
+			100%
+			{
+				transform: scale(1.1);
+			}
+		}
+	</style>
+
+</head>
+<body>
+							<!-- navbar -->
+	<section id="menubar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <a class="navbar-brand" href="KCC.html" style="color: #00cc99;"><i class="fa fa-bolt" aria-hidden="true" style="color: #00cc99;"></i>
+KCC</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="font-weight: bold;">Search</button>
+    </form>
+  </div>
+</nav>
+	</section>
+							<!-- kcclogo  -->
+	<div class="jumbotron">
+  		<div class="front">
+  			<img src="http://blog.kccitm.edu.in/wp-content/uploads/2020/06/kcc-institute-logo-real.png" alt="WordPress on Google Compute Engine">
+  			<h3>Introduces</h3>
+  			<h1 style="margin: auto 5%;color: white;">KCC <span>Fitness Club</span></h1>
+  		</div>
+	</div>
+						<!-- About -->
+	<div class="About">
+		<h1>About</h1>
+		<h2><span style="text-decoration: underline;text-decoration-color: #00cc99;color: white;">We Focus On</span> <span>Student Fitness</span></h2>
+		<div class="row">
+			<div class="left col-md-6">
+				<p class="bg-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="right col-md-6">
+				<img src="4.jpg">
+			</div>
+		</div>
+		<div class="row">
+			<div class="right col-md-6">
+				<img src="5.jpg">
+			</div>
+			<div class="left col-md-6">
+				<p class="bg-primary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</div>
+	</div>
+							<!-- Services -->
+	<div class="Service">
+		<h1>Service</h1>
+		<h2><span style="text-decoration: underline;text-decoration-color: #00cc99;color: white;">We Also</span> <span>Provide Necessary Things</span></h2>
+		<div class="row">
+			<div class="col-md-4">
+				<h4>GYM Outfit</h4>
+				<img src="6.jpg">
+			</div>
+			<div class="col-md-4">
+				<h4 style="margin-left: 12%;">Equipment Knowledge</h4>
+				<img src="7.jpg">
+			</div>
+			<div class="col-md-4">
+				<h4 style="margin-left: 18%;">Workout Diet Plan</h4>
+				<img src="8.jpg">
+			</div>
+		</div>
+	</div>
+	<div class="team">
+		<h1>Our Team</h1>
+		<h2><span style="text-decoration: underline;text-decoration-color: #00cc99;color: white;">Meet</span> <span>Best Instructors</span></h2>
+		<div class="row">
+			<div class="col-md-4">
+				<h3>Alice</h3>
+				<p style="font-size: 20px"><a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a></p>
+          		<p style="font-size: 20px"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></p>
+          		<p style="font-size: 20px"><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></p>
+				<img src="12.jpg">
+				<h4>Dietitian</h4>
+			</div>
+			<div class="col-md-4">
+				<h3>Jasper</h3>
+				<p style="font-size: 20px"><a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a></p>
+          		<p style="font-size: 20px"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></p>
+          		<p style="font-size: 20px"><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></p>
+				<img src="11.jpg">
+				<h4>Gym Instructor</h4>
+			</div>
+			<div class="col-md-4">
+				<h3>Melissa</h3>
+				<p style="font-size: 20px"><a href="https://www.facebook.com/"><i class="fa fa-facebook-official"></i></a></p>
+          		<p style="font-size: 20px"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></p>
+          		<p style="font-size: 20px"><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></p>
+				<img src="13.jpg">
+				<h4>Head Of KCC Fitness Club</h4>
+			</div>
+		</div>
+	</div>
+	<!-----------------Contact Us----------------->
+   <section id="contact" style="background-image: url(15.jpg); border: 5px solid white;padding-bottom: 20px;height: 100vh">
+   		<h1>Contact Us</h1>
+   		<div class="cont">
+   			<form>
+   				<input type="text" name="" placeholder="Full Name" required=""><br><br>
+   				<input type="email" name="" placeholder="Email" required=""><br><br>
+   				<input type="number" name="" placeholder="Number" required=""><br><br>
+   				<textarea cols="40" rows="5"></textarea><br><br>
+   				<button>SEND MESSAGE</button>
+   			</form>
+   		</div>
+   </section>
+   <!-----------------Social Media----------------->
+   <section id="Social" style="background-image: url(16.jpg); padding-bottom: 20px;">
+    <div class="container">
+      <div class="row">
+      	<div class="col-md-4">
+      		<h3>Workout Plan</h3>
+      		<br>
+      		<p>Muscle Building</p>
+      		<p>Fat Loss</p>
+      		<p>Lean Body</p>
+      	</div>
+      	<div class="col-md-4">
+      		<h3>Diet Plan</h3>
+      		<br>
+      		<p>Kito Diet</p>
+      		<p>Muscle Building Diet</p>
+      		<p>Fat Loss Diet</p>
+      		<p>Pre-Workout</p>
+      		<p>Post-Workout</p>
+      	</div>
+      	<div class="col-md-4">
+      		<h3>Contact</h3>
+      		<br>
+      		<p style="font-size: 20px"><i class="fa fa-phone-square" style="color: #00cc99;"></i> +91 783438393 </p>
+          	<p style="font-size: 20px"><i class="fa fa-envelope" style="color: #00cc99;"></i> Kccitm@gmail.com</p>
+          	<p style="font-size: 20px"><a href="https://www.kccitm.college/#contact"><i class="fa fa-address-card" style="color: #00cc99;"></i></a> KCC,knowledge park III,2B-2C,Greater Noida,India</p>	
+      	</div>
+      </div>	
+      <div class="Sociall row">
+      	<div class="col-md-6">
+      		<div class="box">
+      			<h1>Get in touch</h1>
+      		</div>
+        </div>
+      	<div class="col-md-2">
+      		<p style="font-size: 20px"><a href="https://www.facebook.com/"><i class="fa fa-facebook-official" style="color: #1877f2"></i>Facebook</a></p>
+      		<p style="font-size: 20px"><a href="https://www.instagram.com/"><i class="fa fa-instagram" style="color: #ffdc7d;"></i>Instagram</a></p>
+      	</div>
+      	<div class="col-md-2" style="margin-top: 5%;">
+      		<p style="font-size: 20px"><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" style="color: #1da1f2;"></i>Twitter</a></p>
+      	</div>
+      	<div class="col-md-2">
+      		<p style="font-size: 20px"><a href="https://pinterest.com/?lang=en"><i class="fa fa-pinterest" style="color: #bd081c;"></i>Pinterest</a></p>
+      		<p style="font-size: 20px"><a href="https://linkedin.com/?lang=en"><i class="fa fa-linkedin" style="color: #007bb5;"></i>LinkedIn</a></p>
+      	</div>
+      </div>
+    </div>
+   </section>
+   <div>
+   	<h6 style="text-align: center;color: white;background-color: #00cc99;padding: 1% 0;margin-top: .4%;">© Copyright 2020 - KCC Fitness Club | Design by Ritu_Raj</h6>
+   </div>
+</body>
+</html>
